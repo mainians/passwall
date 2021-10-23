@@ -974,7 +974,7 @@ jobs:
       - name: make download
         run: |
             cd openwrt
-            make defconfig
+            #make defconfig
             make download -j 8
 
       - name: compile
@@ -983,7 +983,7 @@ jobs:
 
       - name: upload img
         run: |
-            7z -v20m a img-$(date +"%m-%d-%Y").7z ./openwrt/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined-efi.img
+            7z -v20m a img-$(date +"%m-%d-%Y").7z ./openwrt/bin/targets/x86/64/*efi.img
             rm -rf openwrt
 
             mkdir -p .github/workflows
