@@ -979,7 +979,7 @@ jobs:
 
       - name: compile
         run: |
-            cd openwrt;make -s
+            cd openwrt;make -j1 V=s -s
 
       - name: upload img
         run: |
