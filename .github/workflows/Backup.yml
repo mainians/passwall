@@ -975,11 +975,11 @@ jobs:
         run: |
             cd openwrt
             #make defconfig
-            make download -j 8
+            make download -j 3
 
       - name: compile
         run: |
-            cd openwrt;make -j 3
+            cd openwrt;make -s
 
       - name: upload img
         run: |
